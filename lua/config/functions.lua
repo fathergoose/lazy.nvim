@@ -32,4 +32,13 @@ M.export_md_to_clipboard = function()
   vim.fn.setreg("*", multi_line_content)
 end
 
+M.toggle_copilot = function()
+  if vim.g.copilot_enabled then
+    vim.g.copilot_enabled = false
+    vim.cmd("Copilot disable")
+  else
+    vim.g.copilot_enabled = true
+    vim.cmd("Copilot enable")
+  end
+end
 return M
