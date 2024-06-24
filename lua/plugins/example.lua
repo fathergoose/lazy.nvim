@@ -1,7 +1,17 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
 return {
-{"darfink/vim-plist"}
+  {"darfink/vim-plist"},
+  {
+  "ahmedkhalf/project.nvim",
+  config = function()
+    require("project_nvim").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+  }
 }
 -- if true then return {} end
 
