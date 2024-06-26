@@ -1,8 +1,5 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 return {
-<<<<<<< Updated upstream
-{"darfink/vim-plist"}
-=======
   { "darfink/vim-plist" },
   {
     "ahmedkhalf/project.nvim",
@@ -49,7 +46,6 @@ return {
       })
     end,
   },
->>>>>>> Stashed changes
 }
 -- if true then return {} end
 
