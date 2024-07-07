@@ -46,6 +46,29 @@ return {
       })
     end,
   },
+  {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    opts = function()
+      local fluff = require("lint").linters.sqlfluff
+      fluff.args = {
+        "lint",
+        "--dialect=postgres",
+        "-"
+      }
+    end,
+  },
+  {
+    {
+      "stevearc/conform.nvim",
+      optional = true,
+      opts = function(_, opts)
+        opts.formatters.sqlfluff = {
+          args = { "format", "--dialect=postgres", "-" },
+        }
+      end,
+    },
+  },
 }
 -- if true then return {} end
 
