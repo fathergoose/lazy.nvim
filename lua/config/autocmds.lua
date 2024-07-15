@@ -22,3 +22,8 @@
 
 -- I want a variable to track enabled/diabled that defaults to disabled
 -- but keeps it's state unless entering a markdown or text buffer
+
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
+  pattern = { "*" },
+  command = "silent! wa",
+})
